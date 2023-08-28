@@ -24,9 +24,9 @@ function Square({value, onSquareClick, colorLight}){
     
     return <button onClick={onSquareClick} className={"square " + colorLight}>{value}</button>;
 }
-export default function Board({isNext, squares, onPlay}){
+export default function Board({isNext, squares, onPlay, light, lightWinSquares}){
     //const [squares, setSquares] = useState(Array(9).fill(null));
-    const [light, setLight] = useState(Array(9).fill("basic-light"))
+    
     //const [isNext, setIsNext] = useState(true);
     function handleClick(i){
         if(squares[i] || calculateWinner(squares)) return;
@@ -41,11 +41,7 @@ export default function Board({isNext, squares, onPlay}){
         //setIsNext(!isNext);
         //setSquares(nextSquares);
     }
-    function lightWinSquares(winSquares){
-        const nextLight = light.slice();
-        winSquares.map(s=>{nextLight[s] = "win-light"});
-        setLight(nextLight);
-    }
+    
     const winner = calculateWinner(squares);
     let status;
     if(winner){
