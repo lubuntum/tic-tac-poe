@@ -1,0 +1,60 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+h1{
+  margin-top: 0;
+  font-size: 22px;
+}
+ul{
+  padding-inline-start: 20px;
+}
+body{
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+.square{
+  height: 34px;
+   width: 34px;
+   background: #fff;
+   order: 1px solid #888;
+   float: left;
+   font-size: 24px;
+   font-weight: bold;
+   line-height: 34px;
+   margin-right: -1px;
+   margin-left: -1px;
+   padding: 0;
+   text-align: center;
+}
+.board-row:after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.status{
+  margin-bottom: 10px;
+}
+.win-light{
+  color: green;
+}
+.basic-light{
+  color:black;
+}
+.game{
+  display: flex;
+  flex-direction: row;
+}
+.game-info{
+  margin-left:20px;
+}
+
+
+
+
