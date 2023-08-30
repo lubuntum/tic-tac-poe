@@ -29,11 +29,10 @@ export default function Board({isNext, squares, onPlay, light, lightWinSquares})
     
     //const [isNext, setIsNext] = useState(true);
     function handleClick(i){
-        if(squares[i] || calculateWinner(squares)) return;
         const nextSquares = squares.slice();
+        if(squares[i] || calculateWinner(squares)) return;
         if(isNext) nextSquares[i] = "X";
         else nextSquares[i] = "O";
-
         let result = calculateWinner(nextSquares);
         if(result)
             lightWinSquares(result["winSquares"]);
